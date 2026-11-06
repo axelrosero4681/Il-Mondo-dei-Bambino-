@@ -1,0 +1,33 @@
+IL MONDO DEI BAMBINO - CÓMO USAR TODO
+=====================================
+
+ARCHIVOS
+- index.html ........ Catálogo para las clientas (va en la bio de TikTok). Se sube a GitHub.
+- panel.html ........ Panel: Live, Comentarios, Interesados, Cobros, Reporte, Productos. Se sube a GitHub.
+- puente_tiktok.py .. Programa que lee los comentarios del live. Se queda en la laptop.
+- hoja_google.gs .... Programa para la Hoja de Google (pedidos y vendidos). Ver HOJA_GOOGLE.txt.
+
+LEER COMENTARIOS DEL LIVE (en la laptop)
+1. Abre la carpeta, en la barra de dirección escribe cmd y Enter.
+2. Primera vez:  py -m pip install TikTokLive websockets
+3. Cada live:    py puente_tiktok.py        (para practicar: py puente_tiktok.py --demo)
+4. Abre panel.html > Comentarios > Conectar. No cierres la ventana negra.
+
+INTERESADOS (los que preguntaron y no compraron)
+- Se llenan solos con los comentarios: los que preguntan precio, talla, más modelos o quieren separar.
+- No se borran entre lives.
+- Toca "Mandar selección": la app arma modelos disponibles según lo que preguntó y te da un link.
+  Mándalo por WhatsApp (si dejó número) o cópialo y pégalo en su TikTok (mensaje directo).
+- La clienta abre el link, ve solo esos modelos, elige y manda el pedido (con pago total o abono).
+- El pedido te llega al panel (con la Hoja de Google) o por WhatsApp (lo pegas con "Pegar pedido").
+
+MODO ADMINISTRADOR
+- En Productos > Modo administrador pon un PIN. Reporte y Productos lo pedirán.
+- "Bloquear ahora" antes de prestar la laptop a un ayudante.
+
+CÓDIGOS DE PRODUCTOS (para decir en el live)
+S sets y semaneros · R ropa de bebé · N niña · K 3 a 5 años · T tejidos y amigurumis
+C cobijas y toallas · M medias y gorros · P accesorios · J juguetes · D decoración
+
+CUANDO CAMBIES PRODUCTOS, PRECIOS O STOCK
+Panel > Productos > Descargar para publicar > sube index.html y panel.html a GitHub.

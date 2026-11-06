@@ -1,0 +1,70 @@
+CONECTAR LA APP A UNA HOJA DE GOOGLE (15 minutos, una sola vez)
+================================================================
+Para qué sirve:
+- Los pedidos que las clientas hacen en el catálogo te llegan solos al panel.
+- Lo vendido (en el live o por el catálogo) desaparece del catálogo para las demás.
+- Tu tío ve todos los pedidos y ventas en una hoja tipo Excel.
+
+Usa la cuenta de Google del negocio (o la de tu tío), no tu cuenta personal.
+
+PASO 1 - Crear la hoja
+1. Entra a sheets.google.com y crea una hoja en blanco.
+2. Ponle de nombre: Il Mondo dei Bambino - Pedidos
+
+PASO 2 - Pegar el programa
+1. En la hoja: menú Extensiones > Apps Script.
+2. Borra todo lo que aparece y pega TODO el contenido de hoja_google.gs.
+3. Toca el ícono de guardar (disquete).
+
+PASO 3 - Publicarlo
+1. Arriba a la derecha: Implementar > Nueva implementación.
+2. En el engranaje de "Seleccionar tipo" elige: Aplicación web.
+3. Ejecutar como: Yo.
+   Quién tiene acceso: Cualquier persona.   <- importante
+4. Toca Implementar. Google pide permisos: Autorizar acceso > tu cuenta >
+   "Configuración avanzada" > "Ir a ... (no seguro)" > Permitir.
+   (Dice "no seguro" porque el programa lo hiciste tú y Google no lo revisó. Es normal.)
+5. Copia la "URL de la aplicación web". Termina en /exec.
+
+PASO 4 - Conectar el panel
+1. Abre panel.html > pestaña Productos.
+2. En "Link de la Hoja de Google" pega la URL.
+3. Toca "Probar conexión con la Hoja". Debe decir "Conectado".
+4. En "Link de tu catálogo" pega el link de tu página de GitHub
+   (ej: https://tu-usuario.github.io/il-mondo/).
+5. Escribe los "Datos de pago".
+6. Toca "Descargar para publicar" y sube index.html y panel.html a GitHub.
+   Recién ahí el catálogo de las clientas queda conectado.
+
+LISTO. En la hoja vas a ver 2 pestañas:
+- Pedidos: cada pedido del catálogo (nombre, WhatsApp, productos, forma de pago).
+  La columna "Estado" la pueden cambiar a mano (Pagado, Enviado...). La última
+  columna "Datos (no tocar)" no se toca.
+- Vendidos: cada prenda vendida. NO borres filas de aquí a mano: si borras una,
+  esa prenda vuelve a aparecer en el catálogo.
+
+FOTOS EN GOOGLE DRIVE (para que el archivo pese poco y tengan cientos de fotos)
+1. En Drive crea una carpeta "Fotos Il Mondo".
+2. Nombra cada foto con el código del producto: N3.jpg, T13 jirafa.jpg, S7.png...
+3. Clic derecho en la carpeta > Compartir > Acceso general: "Cualquier persona con el enlace" (Lector).
+4. Copia el link de la carpeta.
+5. Panel > Productos > "Fotos desde Google Drive" > pega el link > "Poner las fotos de la carpeta".
+6. "Descargar para publicar" y sube los 2 archivos.
+La primera vez Google pide un permiso nuevo para leer Drive: autorízalo igual que antes.
+Para un producto nuevo: sube su foto a la carpeta con su código y vuelve a tocar el botón,
+o pega el link de esa foto dentro del producto.
+
+SI CAMBIAS EL PROGRAMA (hoja_google.gs)
+Implementar > Gestionar implementaciones > lápiz > Versión: Nueva > Implementar.
+El link sigue siendo el mismo.
+
+IMPORTANTE SOBRE EL STOCK
+- Para que algo desaparezca solo al venderse, ponle stock (cuántas hay por talla)
+  en Productos. Si una talla no tiene número, no se controla.
+- El número que escribes en el stock es "cuántas tengo AHORA".
+- Al tocar "Descargar para publicar", lo vendido se descuenta del stock y el
+  contador empieza de nuevo. Así nunca se cuenta dos veces.
+
+SIN LA HOJA TAMBIÉN FUNCIONA
+Los pedidos del catálogo llegan por WhatsApp. En el panel, pestaña Live,
+toca "Pegar pedido de WhatsApp", pega el mensaje y se anota solo.
